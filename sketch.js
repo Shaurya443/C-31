@@ -61,7 +61,7 @@ for (var k = 0; k <=800; k = k + 80) {
   }
 //create particle objects
   for(frameCount% 60===0){
-   particles.push(new Particle(random(width/2-10,height/2+10),10,10));
+   particles = new Particle(random(width/2-10,height/2+10),10,10);
     }
 }
 var particles=[]
