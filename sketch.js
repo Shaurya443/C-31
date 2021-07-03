@@ -60,7 +60,7 @@ for (var k = 0; k <=800; k = k + 80) {
     plinkos.push(new Plinko(j,375));
   }
 //create particle objects
-  if(frameCount%60===0){
+  for(frameCount% 60===0){
    particles.push(new Particle(random(width/2-10,height/2+10),10,10));
     }
 }
