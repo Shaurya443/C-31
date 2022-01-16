@@ -85,6 +85,8 @@ function draw() {
     }
   ground.display();
   
+  ground1.display();
+  
   Engine.update(engine);
   
   
