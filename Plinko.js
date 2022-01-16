@@ -17,4 +17,3 @@ class Plinko{
         ellipse(pos.x, pos.y, this.r, this.r);
       }
 }
-© 2022 GitHub, Inc.
