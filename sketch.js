@@ -13,7 +13,7 @@ function setup() {
   createCanvas(800, 800);
   engine = Engine.create();
   world = engine.world;
-  ground = new Ground(width/2,height,width,20);
+  ground = new Ground(240, 785, 480, 30);
 
   //create division objects
   for (var k = 0; k <=80; k = k + 80) {
@@ -82,6 +82,7 @@ function draw() {
   for(frameCount % 60 === 0){
   particles.push(new Particle(random(width/2-20, width/2+20), 10, 10));
     }
+  ground.display();
   
   Engine.update(engine);
   ground.display();
