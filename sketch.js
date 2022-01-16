@@ -91,6 +91,10 @@ function draw() {
   for (var i = 0; i < plinkos.length; i++) {
     plinkos[i].display();   
   }
+  
+  for (var k = 0; k < particles.length; k++){
+    particles[k].display();
+  }
    
   //display the divisions
   for (var k = 0; k < divisions.length; k++) {
