@@ -1,8 +1,11 @@
-var Engine = Matter.Engine,
-  World = Matter.World,
-  Events = Matter.Events,
-  Bodies = Matter.Bodies;
- 
+const Engine = Matter.Engine;
+const World= Matter.World;
+const Bodies = Matter.Bodies;
+const Constraint = Matter.Constraint;
+
+var particles = [];
+var plinkos = [];
+var divisions = [];
 
 var divisionHeight=300;
 var score =0;
@@ -59,14 +62,9 @@ for (var k = 0; k <=800; k = k + 80) {
 
     plinkos.push(new Plinko(j,375));
   }
-//create particle objects
-  for(frameCount% 60===0){
-   particles = new Particle(random(width/2-10,height/2+10),10,10);
-    }
+
 }
-var particles=[]
-var plinkos = []
-var divisions = []
+
 
   
     
@@ -76,9 +74,15 @@ var divisions = []
 
 
 function draw() {
+  Engine.update(engine);
   background("black");
   textSize(20)
  
+  //create particle objects
+  for(frameCount % 60 === 0){
+  particles.push(new Particle(random(width/2-20, width/2+20), 10, 10));
+    }
+  
   Engine.update(engine);
   ground.display();
   
@@ -92,8 +96,6 @@ function draw() {
     divisions[k].display();
   }
 
-  //display the paricles 
-for(var h = 0; h < particles.length; h++){
-  particles[h].display();
-}
+  
+
 }
