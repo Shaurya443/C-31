@@ -13,7 +13,8 @@ function setup() {
   createCanvas(800, 800);
   engine = Engine.create();
   world = engine.world;
-  ground = new Ground(240, 785, 480, 30);
+  ground = new Ground(240, 785, 80, 30);
+    ground1 = new Ground(780, 785, 80, 30);
 
   //create division objects
   for (var k = 0; k <=80; k = k + 80) {
@@ -85,7 +86,7 @@ function draw() {
   ground.display();
   
   Engine.update(engine);
-  ground.display();
+  
   
   //display the plinkos 
   for (var i = 0; i < plinkos.length; i++) {
