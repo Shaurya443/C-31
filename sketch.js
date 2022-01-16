@@ -79,7 +79,7 @@ function draw() {
   textSize(20)
  
   //create particle objects
-  for(frameCount % 60 === 0){
+  if(frameCount % 60 === 0){
   particles.push(new Particle(random(width/2-20, width/2+20), 10, 10));
     }
   ground.display();
